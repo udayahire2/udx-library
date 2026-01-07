@@ -2,7 +2,7 @@ import React, { ButtonHTMLAttributes, forwardRef, ReactNode } from 'react';
 import { motion } from 'framer-motion';
 import { Spinner } from './Spinner';
 import { cn } from '../../utils/cn';
-import { variantStyles, sizeStyles, iconSizes, ButtonVariant, ButtonSize } from './Button.styles';
+import { buttonVariants, iconSizes, ButtonVariant, ButtonSize } from './Button.styles';
 
 export interface ButtonProps extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'onAnimationStart' | 'onDrag' | 'onDragStart' | 'onDragEnd' | 'style'> {
   variant?: ButtonVariant;
@@ -80,20 +80,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         aria-busy={isLoading}
         whileTap={{ scale: 0.99 }}
         transition={{ type: 'spring', stiffness: 300, damping: 20, mass: 0.8 }} // Smoother, less snappy spring
-        className={cn(
-          // Base Layout
-          'relative inline-flex items-center justify-center whitespace-nowrap select-none overflow-hidden',
-          // Transitions
-          'transition-transform duration-200 active:scale-95',
-          // Focus Accessibility
-          'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/50 focus-visible:ring-offset-2 dark:focus-visible:ring-blue-400/50 dark:focus-visible:ring-offset-slate-900',
-          // Disabled State
-          'disabled:pointer-events-none disabled:opacity-50 disabled:grayscale',
-          // Custom Styles
-          variantStyles[variant],
-          sizeStyles[size],
-          className
-        )}
+        className={cn(buttonVariants({ variant, size, className }))}
         {...props as any}
       >
         {/* Imploding Ripple/Ticker Click Overlay */}
