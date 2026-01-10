@@ -1,58 +1,40 @@
-# Textarea Component
+# Textarea
 
-A premium, core component for multi-line text input.
-
-## Features
-
-- **Strict Architecture**: Defined resize constraints to protect layouts.
-- **Auto-Grow**: Opt-in automatic height adjustment.
-- **States**: Clear distinction between `disabled` and `readOnly`.
-- **Theming**: "Machined Groove" aesthetic with dark mode support.
+A multi-line text input field with advanced features like auto-growing and slot support.
 
 ## Installation
 
-```bash
-npx udroid-ui add textarea
-```
+No external dependencies required (uses native `textarea`).
 
 ## Usage
 
-### Basic
-
 ```tsx
-import { Textarea } from "@/udroid/src/components/textarea";
+import { Textarea } from "@/udroid/src/components/textarea/textarea";
+import { Paperclip } from "lucide-react";
 
-<Textarea placeholder="Type your message..." />
+export default function TextareaDemo() {
+  return (
+    <Textarea
+      placeholder="Type your message..."
+      autoGrow
+      startContent={<Paperclip className="size-4" />}
+    />
+  );
+}
 ```
 
-### Auto-Grow
+## API Reference
 
-> **Warning**: Use with caution in long forms. Ideally suited for chat interfaces or comment sections.
->
-> **Note**: When `autoGrow` is enabled, manual resizing is automatically disabled.
+### Textarea
 
-```tsx
-<Textarea autoGrow placeholder="I expand as you type..." />
-```
+Accepts standard HTMLTextareaElement props and the following custom props:
 
-### Variants
-
-```tsx
-<Textarea variant="default" />
-<Textarea variant="filled" />
-<Textarea variant="error" />
-```
-
-## Props
-
-| Prop | Type | Default | Description | Constraint |
-|---|---|---|---|---|
-| `variant` | `'default' \| 'filled' \| 'error'` | `'default'` | Visual style | **No ghost variant** |
-| `resize` | `'none' \| 'vertical'` | `'vertical'` | CSS resize behavior | **No horizontal** |
-| `autoGrow` | `boolean` | `false` | Adapts height to content | **Disables resize** |
-
-## Do's and Don'ts
-
-- ✅ **Do** use `resize="none"` in fixed-layout cards.
-- ✅ **Do** use `autoGrow` for chat inputs.
-- ❌ **Don't** use `horizontal` resize (it breaks grid systems).
+| Prop | Type | Default | Description |
+| :--- | :--- | :--- | :--- |
+| `variant` | `'default' \| 'filled' \| 'error' \| 'success'` | `'default'` | The visual style of the textarea. |
+| `resize` | `'none' \| 'vertical' \| 'horizontal' \| 'both'` | `'vertical'` | Controls the resizeability of the textarea. Forced to `'none'` if `autoGrow` is true. |
+| `autoGrow` | `boolean` | `false` | If true, the textarea grows automatically with content. |
+| `startContent` | `ReactNode` | - | Element to render at the top-start (e.g., icons). |
+| `endContent` | `ReactNode` | - | Element to render at the bottom-end (e.g., send button). |
+| `disabled` | `boolean` | `false` | Disables the textarea. |
+| `readOnly` | `boolean` | `false` | Makes the textarea read-only. |

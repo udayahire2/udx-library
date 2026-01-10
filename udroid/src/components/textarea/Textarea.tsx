@@ -21,13 +21,14 @@ const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
         {
             className,
             variant,
-            size, // Filtered out from generic props if passed accidentally
             resize = "vertical",
             autoGrow = false,
             value,
             onChange,
             disabled,
             readOnly,
+            startContent,
+            endContent,
             asChild = false,
             ...props
         },
@@ -80,10 +81,15 @@ const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
                 data-readonly={readOnly}
                 onClick={handleContainerClick}
             >
+                {startContent && (
+                    <div className="flex items-center justify-center text-muted-foreground [&_svg]:size-4 [&_svg]:shrink-0 mr-2 self-start mt-2">
+                        {startContent}
+                    </div>
+                )}
                 <Comp
                     ref={handleRef}
                     className={cn(
-                        "flex w-full bg-transparent px-3 py-2 text-sm outline-none transition-colors",
+                        "flex w-full bg-transparent px-3 py-2 text-sm outline-none transition-colors hidden-scrollbar",
                         "file:border-0 file:bg-transparent file:text-sm file:font-medium",
                         "disabled:cursor-not-allowed disabled:opacity-50",
                         // Min height
@@ -97,6 +103,11 @@ const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
                     aria-invalid={variant === "error"}
                     {...props}
                 />
+                {endContent && (
+                    <div className="flex items-center justify-center text-muted-foreground [&_svg]:size-4 [&_svg]:shrink-0 ml-2 self-end mb-2">
+                        {endContent}
+                    </div>
+                )}
             </div>
         );
     }

@@ -28,6 +28,16 @@ export interface TextareaProps
     autoGrow?: boolean;
 
     /**
+     * Content to display at the start of the textarea (e.g. icon).
+     */
+    startContent?: React.ReactNode;
+
+    /**
+     * Content to display at the end of the textarea (e.g. icon).
+     */
+    endContent?: React.ReactNode;
+
+    /**
      * Whether to replace the underlying textarea element with a child element.
      */
     asChild?: boolean;
