@@ -9,11 +9,11 @@ import {
     CardFooter,
     CardHeader,
     CardTitle,
-} from "@/udroid/src/components/card/card";
-import { Button } from "@/udroid/src/components/Button/Button";
-import { Input } from "@/udroid/src/components/Input/Input";
-import { Label } from "@/udroid/src/components/label/label";
-import { Switch } from "@/udroid/src/components/switch/switch";
+} from "@/udx/src/components/Card/card";
+import { Button } from "@/udx/src/components/Button/Button";
+import { Input } from "@/udx/src/components/Input/Input";
+import { Label } from "@/udx/src/components/Label/label";
+import { Switch } from "@/udx/src/components/Switch/switch";
 
 export default function CardPreview() {
     const [isDark, setIsDark] = React.useState(false);

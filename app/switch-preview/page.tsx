@@ -1,10 +1,10 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { Switch } from "../../udroid/src/components/switch/switch";
-import { Label } from "../../udroid/src/components/label/label";
+import { Switch } from "../../udx/src/components/Switch/switch";
+import { Label } from "../../udx/src/components/Label/label";
 import { Sun, Moon, Plane, Bluetooth, Bell, Shield } from "lucide-react";
-import { cn } from "../../udroid/src/utils/cn"; // Importing cn for cleaner class conditional logic
+import { cn } from "../../udx/src/utils/cn"; // Importing cn for cleaner class conditional logic
 
 export default function SwitchPreviewPage() {
     // Individual state for each switch to drive row-level styling

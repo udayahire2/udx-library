@@ -1,8 +1,8 @@
 @import "tailwindcss";
-@import "../udroid/src/tokens/colors.css";
-@import "../udroid/src/tokens/radius.css";
-/* @import "../udroid/src/tokens/spacing.css"; */
-/* @import "../udroid/src/tokens/typography.css"; */
+@import "../udx/src/tokens/colors.css";
+@import "../udx/src/tokens/radius.css";
+@import "../udx/src/tokens/spacing.css";
+@import "../udx/src/tokens/typography.css";
 
 @plugin "tailwindcss-animate";
 

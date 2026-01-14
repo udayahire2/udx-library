@@ -6,7 +6,7 @@ import * as z from "zod";
 import * as React from "react";
 import { Sun, Moon, Check, ChevronsUpDown, Mail, User, Lock, Send, MessagesSquare, Briefcase } from "lucide-react";
 
-import { Button } from "@/udroid/src/components/Button/Button";
+import { Button } from "@/udx/src/components/Button/Button";
 import {
     Form,
     FormControl,
@@ -15,12 +15,12 @@ import {
     FormItem,
     FormLabel,
     FormMessage,
-} from "@/udroid/src/components/form/form";
-import { Input } from "@/udroid/src/components/Input/Input";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/udroid/src/components/card/card";
-import { Switch } from "@/udroid/src/components/switch/switch";
-import { Textarea } from "@/udroid/src/components/textarea/Textarea";
-import { RadioGroup, RadioGroupItem } from "@/udroid/src/components/radio/radio";
+} from "@/udx/src/components/Form/form";
+import { Input } from "@/udx/src/components/Input/Input";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/udx/src/components/Card/card";
+import { Switch } from "@/udx/src/components/Switch/switch";
+import { Textarea } from "@/udx/src/components/Textarea/Textarea";
+import { RadioGroup, RadioGroupItem } from "@/udx/src/components/Radio/radio";
 
 // --- Form Schemas ---
 

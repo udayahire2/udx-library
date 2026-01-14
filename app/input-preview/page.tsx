@@ -2,7 +2,7 @@
 "use client";
 
 import React from "react";
-import { Input, Textarea, Button } from "../../udroid/src";
+import { Input, Textarea, Button } from "../../udx/src";
 import { Mail, Search, Eye, Lock, User, AlertCircle, Paperclip, Send, Mic, Sparkles, Sun, Moon } from "lucide-react";
 
 export default function InputPreviewPage() {
@@ -90,7 +90,7 @@ export default function InputPreviewPage() {
                 </section>
 
                 {/* CHATBOT INTERFACES */}
-               
+
 
             </div>
         </div>

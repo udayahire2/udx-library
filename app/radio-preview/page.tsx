@@ -1,8 +1,8 @@
 "use client";
 
 import * as React from "react";
-import { RadioGroup, RadioGroupItem } from "../../udroid/src/components/radio";
-import { Label } from "../../udroid/src/components/label";
+import { RadioGroup, RadioGroupItem } from "../../udx/src/components/Radio";
+import { Label } from "../../udx/src/components/Label";
 import { Sun, Moon } from "lucide-react";
 
 export default function RadioPreviewPage() {
@@ -33,7 +33,7 @@ export default function RadioPreviewPage() {
                         {isDark ? <Sun className="size-5" /> : <Moon className="size-5" />}
                     </button>
                 </div>
-                <h1 className="text-4xl font-bold tracking-tight">Udroid Radio System</h1>
+                <h1 className="text-4xl font-bold tracking-tight">udx Radio System</h1>
                 <p className="text-muted-foreground max-w-lg mx-auto">
                     Precision selection controls. Built for clarity, tactile feedback, and premium aesthetics.
                 </p>

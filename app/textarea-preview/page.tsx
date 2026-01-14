@@ -3,9 +3,9 @@
 import * as React from "react";
 import { Moon, Sun, Mail, MessageSquare, Mic, Send, AlertCircle } from "lucide-react";
 
-import { Textarea } from "@/udroid/src/components/textarea/Textarea";
-import { Label } from "@/udroid/src/components/label/label";
-import { Separator } from "@/udroid/src/components/separator/separator";
+import { Textarea } from "@/udx/src/components/Textarea/Textarea";
+import { Label } from "@/udx/src/components/Label/label";
+import { Separator } from "@/udx/src/components/Separator/separator";
 
 export default function TextareaPreview() {
     const [isDark, setIsDark] = React.useState(false);

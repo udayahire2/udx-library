@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "../../udroid/src";
+import { Button } from "../../udx/src";
 import React from "react";
 import {
   Bell,

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { Separator } from "../../udroid/src/components/separator/separator";
+import { Separator } from "../../udx/src/components/Separator/separator";
 import { Sun, Moon } from "lucide-react";
 
 export default function SeparatorPreviewPage() {
